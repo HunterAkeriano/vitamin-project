@@ -1,0 +1,35 @@
+.you-like {
+  margin-top: 105px;
+  margin-bottom: 73px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-size: clamp(20px, 2.5vw, 30px);
+    font-weight: 500;
+    margin-bottom: 42px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    min-height: 507px;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

@@ -1,0 +1,166 @@
+.social-sign-up {
+  font-family: Effra, sans-serif;
+  color: $font-color-black;
+
+  &__title {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+    font-size: 26px;
+
+
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 34px;
+    }
+
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 242px;
+      height: 1px;
+      background: $lineBackground;
+    }
+
+    &::after {
+      right: 0;
+
+      @include media-breakpoint-down(sm) {
+        width: 33vw;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 20vw;
+      }
+    }
+
+    &::before {
+      left: 0;
+
+      @include media-breakpoint-down(sm) {
+        width: 33vw;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 20vw;
+      }
+    }
+
+    &_login {
+      margin-bottom: 64px;
+      font-size: 20px;
+    }
+
+    &_log {
+      font-size: 20px;
+
+      @include media-breakpoint-down(xs) {
+        font-size: 16px;
+        margin-bottom: 41px;
+      }
+    }
+
+    &_reg{
+      margin-bottom: 44px;
+
+      @include media-breakpoint-down(xs) {
+        font-size: 24px;
+        margin-bottom: 34px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 10px;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 45px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      row-gap: 10px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: start;
+    border-radius: 12px;
+    padding-left: 16px;
+    max-width: 206px;
+    width: 100%;
+    height: 65px;
+    background: $cardBackground;
+
+    @include media-breakpoint-down(xs) {
+      padding: 0 21px;
+      width: 100%;
+      height: 56px;
+      max-width: 100%;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    column-gap: 35px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+
+    span {
+      width: 100%;
+      text-align: center;
+      flex: 1;
+
+      @include media-breakpoint-down(xs) {
+        font-size: 16px;
+      }
+    }
+
+    svg {
+      @include media-breakpoint-down(xs) {
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  &__icon-google {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__icon-apple {
+    width: 20px;
+    height: 48px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    &:not(.no-effect){
+      @include media-breakpoint-down(xs) {
+        left: -4px ;
+        top: 1px;
+      }
+    }
+  }
+
+  &__icon-facebook {
+    width: 32px;
+    height: 64px;
+    margin-left: 2px;
+  }
+}

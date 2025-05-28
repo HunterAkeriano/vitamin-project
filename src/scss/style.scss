@@ -1,0 +1,101 @@
+@import './config/media-breakpoints';
+@import './config/fonts';
+@import './config/reset';
+@import './config/vars';
+
+body {
+  font-family: Effra, sans-serif;
+  background-color: $background;
+  color: $fontColorTitleBlack;
+  font-size: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: $containerWidth;
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 20px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-x: hidden;
+
+  &_one-product {
+    overflow-x: visible;
+  }
+}
+
+.page {
+  flex: 1 1 auto;
+  margin-top: 110px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 70px;
+  }
+
+  &_one-product {
+    margin-top: 0;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 70px;
+    }
+  }
+
+  &_successful-order {
+    margin-top: 0;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 16px;
+    }
+  }
+
+  &_quiz {
+    margin-top: 0;
+  }
+
+  &_shop {
+    margin-top: 80px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 70px;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(0.7);
+  }
+}
+
+
+@import './components/btn';
+@import './components/header';
+@import './components/footer';
+@import './components/prod-card';
+@import './components/feedback';
+@import './components/skeleton';

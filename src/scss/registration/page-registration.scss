@@ -1,0 +1,225 @@
+.registration {
+  background: $cardBackground;
+
+  @include media-breakpoint-down(sm) {
+    background: transparent;
+  }
+
+  &__container {
+    margin: 0 auto;
+    padding: 60px 119px;
+    width: 100%;
+    height: 950px;
+    max-width: 920px;
+    background: $background;
+
+    @include media-breakpoint-down(md) {
+      padding: 42px 15px 60px 15px;
+    }
+  }
+
+
+  &__nav-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    padding: 12px;
+    background-color: white;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 42px;
+      margin-left: 5px;
+      max-width: 335px;
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-right: 5px;
+    }
+  }
+
+  &__nav-btn {
+    border-radius: 12px;
+    padding: 17px 83px 20px 54px;
+    font-family: Effra, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    font-size: 20px;
+    color: $font-color-black;
+    background-color: transparent;
+
+    &_regular{
+      padding-left: 84px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 14px 22px;
+      font-size: 16px;
+    }
+
+    &.registration__nav-btn_active {
+      &.registration__nav-btn_who {
+
+        max-width: 330px;
+      }
+    }
+
+    &_active {
+      padding: 17px 49px 20px 53px;
+      width: 100%;
+      max-width: 320px;
+      background: $orangeMain;
+      color: $font-color-white;
+      &:has(.registration__nav-btn_who){
+
+      }
+
+      @include media-breakpoint-down(xs) {
+        padding: 14px 30px 14px 30px;
+        width: auto;
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    overflow: hidden;
+    margin-top: 45px;
+    margin-bottom: 46px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 20px;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 16px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 150px;
+      height: 1px;
+      background: $lineBackground;
+    }
+
+    &::after {
+      right: 0;
+
+      @include media-breakpoint-down(sm) {
+        width: 20vw;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 0;
+      }
+    }
+
+    &::before {
+      left: 0;
+
+      @include media-breakpoint-down(sm) {
+        width: 20vw;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 0;
+      }
+    }
+  }
+}
+
+.registration-form {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 444px;
+  transform: translateX(-50%);
+
+  @include media-breakpoint-down(xs) {
+    max-width: 335px;
+  }
+
+  @include media-breakpoint-down(xxs) {
+    padding: 0 5px;
+  }
+
+
+  &__field {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    padding: 17px 140px;
+    border-radius: 100px;
+    max-width: 444px;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 20px;
+    color: $font-color-white;
+
+    &:not(.no-effect) {
+      width: 100%;
+    }
+
+    &_disabled:not(.no-effect) {
+      background: $disabled-btn;
+      color: $font-color-white;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 16px;
+      padding: 17px 140px;
+      margin-top: 22px;
+      max-width: 335px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+
+      max-width: 280px;
+    }
+  }
+
+  &__error-message {
+    position: relative;
+    top: 20px;
+    color: $redText;
+  }
+
+  &__login {
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    margin-top: 105px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: $font-color-black;
+
+    @include media-breakpoint-down(xs) {
+      margin-top: 85px;
+      font-size: 14px;
+    }
+  }
+
+  &__login-link {
+    color: $orangeMain;
+  }
+}

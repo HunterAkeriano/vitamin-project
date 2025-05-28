@@ -1,0 +1,58 @@
+<div class="wrapper">
+  <header class="recover-header">
+
+    <a class="recover-header__link" href="/Vitamin">
+      <svg>
+        <use href="#vitamin-logo"></use>
+      </svg>
+    </a>
+
+    <a class="recover-header__link-mobile" href="/Vitamin">
+      <svg>
+        <use href="#back-arrow"></use>
+      </svg>
+      <span>Account</span>
+    </a>
+  </header>
+
+  <main class="page recover">
+    <div class="recover__container">
+      <form class="recover__form" id="recover-form">
+
+        <div class="recover__title">Recover password</div>
+
+        <div class="recover__description">Please enter your email:</div>
+
+        <div class="recover__field field">
+          <input class="field__input field__input_password" id="recover-email" placeholder=" " type="password" name="email">
+          <label class="field__label" for="recover-email">Email</label>
+          <span class="field__password-icon show">
+
+            <svg class="field__password-icon-open">
+              <use href="#password-icon"></use>
+            </svg>
+
+            <svg class="field__password-icon-close">
+              <use href="#password-icon-alt"></use>
+            </svg>
+          </span>
+        </div>
+
+        <button class="btn btn_orange  recover__submit-btn" type="submit">
+          Recover
+        </button>
+
+        <span class="recover__error-message"></span>
+      </form>
+
+      <p class="recover__reg">
+        Remember your password?
+        <a href="/Vitamin/login.html" class="recover__login-link">
+          Back to login
+        </a>
+      </p>
+    </div>
+
+  </main>
+</div>
+<load ="/src/img/recover-sprite.html" />

@@ -1,0 +1,259 @@
+.choose-products {
+  position: relative;
+  padding-bottom: 100px;
+  color: $font-color-white;
+
+  &__layer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+    @include media-breakpoint-up(xl) {
+      right: 40%;
+      transform: translateX(60%);
+    }
+
+    @include media-breakpoint-down(lg) {
+      left: 0;
+      right: auto;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      height: 369px;
+    }
+  }
+
+  &__layer-img {
+    max-width: 50vw;
+
+    @include media-breakpoint-down(md) {
+      max-width: 530px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100vw;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      height: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__text-block {
+    margin-top: 234px;
+    margin-bottom: 146px;
+    width: 100%;
+    max-width: 444px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin: 100px auto;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin: 93px auto 50px auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 33px;
+    font-family: Effra, sans-serif;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 33px;
+    font-family: OpenSans, sans-serif;
+    font-weight: normal;
+    line-height: 1.63;
+    font-size: clamp(14px, 2.5vw, 20px);
+
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    font-family: Effra, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: $font-color-white;
+
+svg{
+  width: 10px;
+  height: 15px;
+  position: relative;
+  top: 3px;
+}
+
+    @include media-breakpoint-down(xs) {
+      display: block;
+      margin: 0 auto;
+      width: 107px;
+      font-size: 14px;
+    }
+  }
+
+  &__products-slider {
+    overflow: hidden;
+    margin-top: 150px;
+    width: 920px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      overflow: visible;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 690px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      width: 570px;
+    }
+  }
+
+  &__slider-wrapper {
+
+    @include media-breakpoint-down(xs) {
+      padding-left: 15px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding-left: 0;
+    }
+  }
+
+  &__slide {
+    display: flex !important;
+    flex-direction: column;
+    margin-right: 33px;
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 400px !important;
+    color: $font-color-white;
+    max-height: 535px;
+
+    &_redBg {
+      background: $redBg;
+    }
+
+    &_darkBlueBg {
+      background: $darkBlueBg;
+    }
+
+    &_orangeBg {
+      background: $orangeBg;
+    }
+
+    &_blueBg {
+      background: $blueBg;
+    }
+
+    &_greenMintBg {
+      background: $greenMintBg;
+    }
+
+    &_purpleBg {
+      background: $purpleBg;
+    }
+
+    &_pinkBg {
+      background: $pinkBg;
+    }
+
+
+    @include media-breakpoint-down(xs) {
+      margin-right: 10px;
+      width: 335px !important;
+      padding: 20px 20px 20px 20px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      width: 280px !important;
+    }
+  }
+
+  &__img-wrapper {
+    width: 235px;
+    height: 205px;
+    margin: 0 auto 40px auto;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 27px;
+      width: 143px;
+      height: 159px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__type {
+    margin-bottom: 12px;
+    font-family: OpenSans, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0.5;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__product-title {
+    margin-bottom: 20px;
+    font-family: Effra, sans-serif;
+    font-weight: 500;
+    font-size: clamp(18px, 2.5vw, 24px);
+
+    @include media-breakpoint-down(xs) {
+      height: 54px;
+    }
+  }
+
+  &__product-description {
+    overflow: hidden;
+    font-family: OpenSans, sans-serif;
+    font-weight: normal;
+    line-height: 1.63;
+    font-size: 16px;
+    color: $font-color-white;
+    opacity: 0.7;
+    height: 130px;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}

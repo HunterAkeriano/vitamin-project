@@ -1,0 +1,91 @@
+@import 'swiper/swiper-bundle.css';
+
+.feedback {
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-top: 50px;
+  max-width: $containerWidth;
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 20px;
+    padding-top: 30px;
+  }
+
+  &__slider {
+    width: 100%;
+  }
+
+  &__wrapper-slider {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__slide {
+    display: flex !important;
+    flex-grow: 1;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 40px 34px 30px 30px;
+    height: auto !important;
+    color: $font-color-black;
+    background: $cardBackground;
+
+    @include media-breakpoint-down(sm) {
+      padding: 28px 19px 20px;
+      max-width: calc(100vw - 40px);
+    }
+  }
+
+  &__grade {
+    display: flex;
+    margin-bottom: 22px;
+    gap: 5px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 18px;
+    }
+
+    svg {
+      width: 20px;
+      height: 19px;
+    }
+  }
+
+  &__title-feedback {
+    margin-bottom: 17px;
+    font-weight: 500;
+    font-size: clamp(16px, 2.5vw, 20px);
+  }
+
+  &__text {
+    margin-bottom: 52px;
+    font-weight: normal;
+    line-height: 1.75;
+    font-size: clamp(14px, 2.5vw, 16px);
+    font-family: OpenSans;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 97px;
+      line-height: 1.7;
+      letter-spacing: 0.5px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      margin-bottom: 58px;
+    }
+  }
+
+  &__person-block {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    font-weight: 700;
+    gap: 15px;
+    font-size: clamp(14px, 2.5vw, 16px);
+    font-family: OpenSans;
+
+    @include media-breakpoint-down(sm) {
+      letter-spacing: 0.5px;
+    }
+  }
+}

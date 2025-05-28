@@ -1,0 +1,101 @@
+<section class="overview profile-page__partition-item profile-page__partition-item_hidden" part="overview">
+
+  <div class="overview__header">
+    <div class="overview__title">Account Overview</div>
+    <div class="overview__role"></div>
+  </div>
+
+  <form class="overview-form" id="overview-form">
+    <div class="overview-form__wrapper">
+
+      <div class="overview-form__field field">
+        <input  class="field__input" id="first_name" placeholder=" " name="first_name" type="text">
+        <label class="field__label" for="first_name" >First Name</label>
+      </div>
+
+      <div class="overview-form__field field">
+        <input  class="field__input" id="last_name" placeholder=" " name="last_name" type="text">
+        <label class="field__label" for="last_name" >Last Name</label>
+      </div>
+
+      <div class="overview-form__field field">
+        <input  class="field__input" id="address_one" placeholder=" " name="address_one" type="text">
+        <label class="field__label" for="address_one" >Address line 1</label>
+      </div>
+
+      <div class="overview-form__field field">
+        <input  class="field__input" id="address_two" placeholder=" " name="address_two" type="text">
+        <label class="field__label" for="address_two" >Address line 1</label>
+      </div>
+
+      <div class="overview-form__field field">
+        <input  class="field__input" id="city" placeholder=" " name="city" type="text">
+        <label class="field__label" for="city" >City</label>
+      </div>
+
+      <div class="overview-form__field overview-form__field_double">
+
+        <div class="overview-form__field overview-form__field_custom-select">
+
+          <label class="overview-form__form-label" for="overview-state">State / Province</label>
+
+          <div class="dropdown">
+
+            <div class="dropdown__box deliver-info__form-input deliver-info__form-input_dropdown-box">
+              <input class="dropdown__input dropdown__text" type="text" name="state" id="overview-state" placeholder="---" readonly>
+
+              <div class="dropdown__arrow">
+                <svg>
+                  <use href="#next-arrow"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="dropdown__list">
+              <div class="dropdown__item">NY</div>
+              <div class="dropdown__item">TN</div>
+              <div class="dropdown__item">TX</div>
+              <div class="dropdown__item">UT</div>
+              <div class="dropdown__item">VT</div>
+              <div class="dropdown__item">VA</div>
+              <div class="dropdown__item">WA</div>
+              <div class="dropdown__item">WV</div>
+              <div class="dropdown__item">WI</div>
+              <div class="dropdown__item">WY</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-form__field overview-form__field_mini field">
+          <input  class="field__input" id="postal_code"  maxlength="7" placeholder=" " name="postal-code" type="text">
+          <label class="field__label" for="postal_code" >ZIP / Postal code</label>
+        </div>
+      </div>
+
+      <div class="overview-form__field field">
+        <input  class="field__input" id="email" placeholder=" " name="email" type="email">
+        <label class="field__label" for="email" >Email</label>
+      </div>
+
+      <div class="overview-form__field field">
+        <input  class="field__input" id="phone" placeholder=" " name="email" type="email">
+        <label class="field__label" for="phone" >Phone Number</label>
+      </div>
+
+      <div class="overview-form__field-wrapper overview-form__field-wrapper_hidden">
+
+        <div class="field__file-description field__file-description_mt" >Wholesale purchase permission</div>
+
+        <div class="overview-form__field overview-form__field_file field field_file">
+          <input class="field__input" id="wholesale-registration-file" type="file"  hidden>
+          <span class="overview-form__name-file">123qwer.pdf</span>
+          <button class=" btn btn_orange field__file-button" id="overview-add-file-btn" type="button" >Upload</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn_orange overview-form__submit-btn overview-form__submit-btn_disabled" disabled type="submit">Save</button>
+  </form>
+  
+  <div class="overview__message hidden"></div>
+</section>

@@ -1,0 +1,39 @@
+<section class="payment-methods profile-page__partition-item profile-page__partition-item_hidden" part="payment">
+
+  <div class="payment-methods__title">Payment methods</div>
+
+  <form class="cards" id="payment-methods-form">
+
+    <div class="card-front">
+
+      <div class="card-front__input-wrapper">
+        <label class="card-front__label" for="card_number">Card Number</label>
+        <input class="card-front__input card-input" id="card_number" type="text" placeholder="" name="card_number">
+      </div>
+
+      <div class="card-front__img-wrapper"><img class="card-front__img" src="/src/img/profile/logos.png" alt=""></div>
+
+      <div class="card-front__input-wrapper">
+        <label class="card-front__label" for="card_date">Expiration</label>
+        <input class="card-front__input card-front__input_date card-input" id="card_date" type="text"
+               placeholder="mm\yy" name="card_date">
+      </div>
+    </div>
+
+    <div class="card-back">
+
+      <div class="card-back__magnetic-stripe"></div>
+
+      <div class="card-back__input-wrapper">
+        <label class="card-back__label" for="card_cvv">CVC</label>
+        <input class="card-back__input card-input" id="card_cvv" type="password" placeholder="" maxlength="3"
+               name="card_cvv">
+      </div>
+    </div>
+
+    <button class="btn cards__submit cards__submit_disabled" id="payment-submit-btn" type="submit" disabled>Save
+    </button>
+  </form>
+
+  <div class="payment-methods__message hidden"></div>
+</section>

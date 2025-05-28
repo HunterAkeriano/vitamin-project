@@ -1,0 +1,241 @@
+@import '../style';
+@import '../registration/social-sign-up';
+@import '../login/login-field.scss';
+
+.body {
+  visibility: hidden;
+  background: $cardBackground;
+
+  @include media-breakpoint-down(xs) {
+    background: transparent;
+  }
+}
+
+.auth-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  background: $cardBackground;
+
+
+  svg {
+    width: 42px;
+    height: 50px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    background: transparent;
+    padding-bottom: 18px;
+    border-bottom: 1px solid $border-color;
+  }
+
+  @include media-breakpoint-down(md) {
+    background: transparent;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+  }
+
+  &__link {
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+
+  &__link-mobile {
+    display: none;
+
+    @include media-breakpoint-down(xs) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      span {
+        flex-grow: 1;
+        width: 100%;
+        max-width: 576px;
+        text-align: center;
+
+        @include media-breakpoint-down(xs) {
+          position: relative;
+          top: -5px;
+          left: -5px;
+        }
+      }
+
+      svg {
+        width: 11px;
+        height: 21px;
+
+        @include media-breakpoint-down(xs) {
+          position: relative;
+          top: -3px;
+          left: 13px;
+        }
+      }
+    }
+  }
+}
+
+.login-page {
+  padding-top: 61px;
+
+  @include media-breakpoint-down(xs) {
+    padding-top: 12px;
+  }
+
+  &__container {
+    margin: 0 auto;
+    padding-top: 52px;
+    padding-right: 120px;
+    padding-bottom: 60px;
+    padding-left: 120px;
+    max-width: 920px;
+    background: $background;
+
+    @include media-breakpoint-down(md) {
+      padding: 60px 15px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 40px 15px 47px 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: Effra, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 26px;
+    color: $font-color-black;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    font-family: OpenSans, sans-serif;
+    font-weight: normal;
+    line-height: 1.75;
+    text-align: center;
+    font-size: 16px;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+    }
+  }
+
+  &__registration {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 16px;
+    color: $font-color-black;
+  }
+
+  &__registration-link {
+    color: $orangeMain;
+  }
+
+  &__form {
+    margin-bottom: 51px;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__log {
+    font-family: OpenSans, sans-serif;
+    margin-top: 85px;
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 16px;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+      margin-top: 0;
+      padding-top: 45px;
+      border-top: 1px solid $border-color;
+    }
+  }
+}
+
+.login-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 30px;
+
+  @include media-breakpoint-down(xs) {
+    padding-left: 10px;
+  }
+
+  &__submit {
+    position: relative;
+    right: 14px;
+    top: 6px;
+    font-size: 20px;
+
+    &:not(.no-effect) {
+      width: 270px;
+      padding: 20px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 16px;
+      margin-top: 6px;
+      &:not(.no-effect) {
+        margin-left: 15px;
+        width: 100%;
+        max-width: 335px;
+      }
+    }
+
+    @include media-breakpoint-down(xxs) {
+      &:not(.no-effect) {
+        width: 278px;
+      }
+    }
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__error-message {
+    position: absolute;
+    bottom: -30px;
+    color: $red;
+  }
+}
+
+.forgot-password-link {
+
+  position: absolute;
+  right: 27px;
+  top: 40%;
+  font-family: OpenSans, sans-serif;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+  color: $font-color-black;
+  opacity: 0.5;
+
+  @include media-breakpoint-down(xs) {
+    right: 22px;
+  }
+
+}

@@ -1,0 +1,213 @@
+.tell-us {
+  position: relative;
+  padding-bottom: 150px;
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 27px;
+    overflow: hidden;
+  }
+
+  &_bottom {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 50px;
+      overflow: visible;
+    }
+  }
+
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: $containerWidth;
+  }
+
+  &__logo {
+    @include media-breakpoint-down(xs) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__title {
+    padding-top: 50px;
+    padding-bottom: 32px;
+    max-width: 840px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 56px;
+    color: $font-color-black;
+
+
+    @include media-breakpoint-down(xs) {
+      font-size: 24px;
+      padding-top: 32px;
+      padding-bottom: 15px;
+    }
+
+    &_padding {
+      padding-top: 40px;
+      padding-bottom: 37px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 51px;
+    max-width: 770px;
+    font-family: OpenSans, sans-serif;
+    font-weight: normal;
+    line-height: 1.63;
+    text-align: center;
+    word-spacing: 0.2em;
+    font-size: 20px;
+    color: $fontColorText;
+
+
+    &_width {
+      max-width: 920px;
+      margin-bottom: 48px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__btn {
+    border-radius: 200px;
+    padding: 20px 61px 28px 65px;
+    max-width: 260px;
+    font-family: OpenSans, sans-serif;
+    font-weight: bold;
+    line-height: 1.63;
+    text-align: center;
+    white-space: nowrap;
+    transition: transform 0.3s;
+    font-size: 20px;
+    color: $font-color-white;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 15px 30px;
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 13px 30px;
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      padding: 13px 25px;
+    }
+  }
+
+  &__rotating-segment1 {
+    position: absolute;
+    left: -40px;
+    top: 20px;
+    width: 279px;
+    height: 279px;
+    z-index: -1;
+
+    &_alt {
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &__rotating-segment3 {
+    position: absolute;
+    left: -60px;
+    top: 86px;
+    width: 279px;
+    height: 279px;
+    z-index: -1;
+
+    svg {
+      width: 279px;
+      height: 141px;
+      transform: rotate(180deg);
+    }
+
+
+    @include media-breakpoint-down(xs) {
+      left: auto;
+      right: -120px;
+      top: auto;
+      bottom: -172px;
+      z-index: 2;
+    }
+  }
+
+  &__rotating-segment4 {
+    position: absolute;
+    right: -130px;
+    top: -64px;
+    width: 279px;
+    height: 279px;
+    z-index: -1;
+
+    svg {
+      width: 141px;
+      height: 279px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      left: -130px;
+      right: auto;
+      top: -51px;
+    }
+  }
+
+  &__scale-segment {
+    position: absolute;
+    right: 40px;
+    top: 7px;
+    border-radius: 50%;
+    width: 95px;
+    height: 95px;
+    background: $purple;
+
+    @include media-breakpoint-down(xs) {
+      right: -60px;
+    }
+  }
+
+  &__link {
+    margin-top: 32px;
+    font-family: Effra, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: $orangeLink;
+
+    svg {
+      position: relative;
+      top: 4px;
+      width: 10px;
+      height: 15px;
+    }
+  }
+}

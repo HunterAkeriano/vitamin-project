@@ -1,0 +1,139 @@
+
+.field {
+  position: relative;
+  border-radius: 14px;
+  max-width: 444px;
+  width: 100%;
+  background: $cardBackground;
+
+  &_file {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    @include media-breakpoint-down(xs) {
+      flex-wrap: wrap;
+      width: auto;
+    }
+  }
+
+  &__input {
+    outline: none;
+    border-radius: 4px;
+    padding: 17px 24px;
+    width: 100%;
+    font-size: 18px;
+    background: transparent;
+    font-weight: 400;
+    font-family: OpenSans, sans-serif;
+
+    &:-webkit-autofill,
+    textarea:-webkit-autofill,
+    select:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 1000px #FAF8F6 inset;
+      -webkit-text-fill-color: black;
+    }
+  }
+
+
+  &__label {
+    font-family: OpenSans, sans-serif;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    cursor: text;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    font-size: 18px;
+    color: $font-color-black;
+    opacity: 0.3;
+  }
+
+  &__file-button {
+    border-radius: 12px;
+    padding: 10px 30px;
+
+    @include media-breakpoint-down(xs) {
+      margin: 10px;
+    }
+  }
+
+  &__file-name {
+    position: relative;
+    top: 5px;
+    display: none;
+    margin-right: 26px;
+    font-weight: normal;
+    font-size: 18px;
+    color: $font-color-black;
+    opacity: 0.3;
+
+    @include media-breakpoint-down(xs) {
+      display: flex;
+    }
+  }
+
+  &__file-description {
+    font-weight: normal;
+    font-size: 14px;
+    color: $font-color-black;
+    opacity: 0.3;
+
+    &_mobile {
+      display: none;
+
+      @include media-breakpoint-down(xs) {
+        position: relative;
+        top: -10px;
+        display: flex;
+      }
+    }
+
+    &_pc {
+      position: relative;
+      top: 10px;
+
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+
+    &_mt {
+      position: relative;
+      top: -11px;
+    }
+  }
+}
+
+.field__input:not(:placeholder-shown) + .field__label,
+.field__input:focus + .field__label {
+  left: -1px;
+  top: -13px;
+  padding: 0 3px;
+  color: #000;
+  font-size: 14px;
+  background: #fff;
+  font-weight: 400;
+
+  @include media-breakpoint-down(xs) {
+    left: -2px;
+    top: -15px;
+  }
+}
+
+.just-validate-error-label {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  font-size: 14px;
+
+  @include media-breakpoint-down(xxs) {
+    bottom: -5px;
+    font-size: 12px;
+  }
+}
+
+
+
+
+

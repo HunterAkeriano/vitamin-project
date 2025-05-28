@@ -1,0 +1,234 @@
+.catalog {
+  margin-top: 60px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: auto;
+    }
+  }
+
+  .filter,
+  .dropdown {
+    position: relative;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      margin-top: 31px;
+      width: 200px;
+      gap: 45px;
+
+      @include media-breakpoint-down(sm) {
+        position: absolute;
+        left: -20px;
+        margin-top: 60px;
+        padding: 20px;
+        width: 100vw;
+        height: 0;
+        transition:
+          height 0.3s ease-in-out,
+          opacity 0.3s ease-in-out,
+          z-index 0.3s ease-in-out;
+        z-index: 0;
+        opacity: 0;
+        background-color: $background;
+        gap: 20px;
+      }
+
+      &_active {
+        height: auto;
+        z-index: 2;
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    &__item,
+    &__text {
+      display: flex;
+      text-align: left;
+      background-color: transparent;
+      font-size: clamp(16px, 2.5vw, 22px);
+
+      &_active {
+        color: $orangeMain;
+      }
+
+      &_red {
+        color: $redText;
+      }
+    }
+  }
+
+  .dropdown {
+    &__box {
+      position: absolute;
+      left: -20px;
+      display: none;
+      justify-content: space-between;
+      padding: 20px;
+      width: 100vw;
+      z-index: 2;
+      background-color: $background;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $lineBackground;
+      }
+
+      &_active {
+        svg {
+          rotate: 180deg;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: flex;
+      }
+    }
+
+    &__arrow {
+      width: 20px;
+      height: 20px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        transition: rotate 0.3s ease-in-out;
+      }
+    }
+
+    &__text {
+      line-height: 20px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    width: 100%;
+    min-width: 200px;
+    max-width: 1039px;
+    gap: 40px;
+
+    @include media-breakpoint-down(sm) {
+      gap: 30px;
+    }
+  }
+
+  &-list {
+    @include media-breakpoint-down(sm) {
+      margin-top: 60px;
+    }
+
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-auto-rows: min-content;
+      gap: 32px;
+
+      @include media-breakpoint-down(sm) {
+        grid-template-columns: repeat(auto-fit, minmax(233px, 1fr));
+        gap: 26px 15px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        grid-template-columns: repeat(auto-fit, minmax(calc(160px + (228 - 160) * ((100vw - 375px) / (576 - 375))), 1fr));
+      }
+    }
+
+    &__pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      width: 40px;
+      height: 40px;
+      transition:
+        color 0.3s ease-in-out,
+        width 0.3s ease-in-out,
+        height 0.3s ease-in-out;
+      font-size: clamp(14px, 2.5vw, 20px);
+      background-color: $cardBackground;
+      color: $fontColorText;
+
+      &:hover {
+        width: 50px;
+        height: 50px;
+        color: $fontColorTitleBlack;
+      }
+
+      &_active {
+        width: 50px;
+        height: 50px;
+        color: $fontColorTitleBlack;
+        background-color: $orangeLink-hover;
+      }
+
+      svg {
+        width: 60%;
+        height: 60%;
+      }
+
+      &_prew,
+      &_next {
+        background-color: transparent;
+      }
+
+      &_next {
+        svg {
+          rotate: 180deg;
+        }
+      }
+    }
+
+    &__view-more {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      border-radius: 40px;
+      padding: 15px;
+      width: 100%;
+      max-width: 400px;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: $cardBackground;
+      gap: 12px;
+
+      @include media-breakpoint-down(sm) {
+        display: flex;
+      }
+
+      svg {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+}

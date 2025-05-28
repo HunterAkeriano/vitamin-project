@@ -1,0 +1,38 @@
+<main class="login-page">
+
+  <div class="login-page__container">
+    <div class="login-page__title">Sign in with email</div>
+
+    <div class="login-page__subtitle">Please enter your e-mail and password:</div>
+
+    <form class="login-page__form login-form" id="login-form">
+
+      <div class="login-form__field field">
+        <input class="field__input" id="regular-login-email" placeholder=" " type="email" name="email">
+        <label class="field__label" for="regular-login-email">Email</label>
+      </div>
+
+      <div class="login-form__field field">
+        <input class="field__input field__input_login-password" id="login-password" type="password" placeholder=" " autoComplete="new-password"
+               name="password">
+        <label class="field__label" for="login-password">Password</label>
+        <a class="forgot-password-link" href="/Vitamin/recover.html">Forgot password?</a>
+      </div>
+
+      <button class="btn btn_orange btn_login login-form__submit" type="submit">Sign in</button>
+
+      <span class="login-form__error-message"></span>
+    </form>
+
+    <load
+    ="/src/html/registration/social-sign-up.html" title-modification="social-sign-up__title_log"
+    title="or sign in with..." />
+  </div>
+
+  <p class="login-page__log">Don't have an account?
+    <a href="/Vitamin/registration.html"
+       class="login-page__registration-link">
+      Create one
+    </a>
+  </p>
+</main>

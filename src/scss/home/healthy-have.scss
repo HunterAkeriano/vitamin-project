@@ -1,0 +1,388 @@
+.healthy-have {
+  position: relative;
+  padding-top: 217px;
+  padding-bottom: 293px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 117px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &::before {
+      content: '';
+      position: absolute;
+      right: 30px;
+      top: -30px;
+      display: block;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: scale 10s linear infinite;
+      z-index: 1;
+      background: $orange;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-top: -100px;
+      padding-top: 71px;
+      padding-bottom: 130px;
+    }
+    @include media-breakpoint-down(xxs) {
+      margin-top: -100px;
+      padding-top: 71px;
+      padding-bottom: 115px;
+    }
+  }
+
+  @include media-breakpoint-down(xxs) {
+    padding-bottom: 105px;
+  }
+
+  &__layer {
+    position: absolute;
+    width: 50vw;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 165px;
+      top: 65px;
+      display: block;
+      border-radius: 50%;
+      width: 139px;
+      height: 139px;
+      animation: scale 10s linear infinite;
+      z-index: 1;
+      background: $orange-circle;
+
+      @include media-breakpoint-down(md) {
+        left: auto;
+        right: 60px;
+        top: -20px;
+        width: 100px;
+        height: 100px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      top: -242px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100vw;
+      height: 370px;
+      overflow-x: hidden;
+      top: 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 40px;
+      height: auto;
+      width: 100vw;
+      left: 0;
+      top: 0;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      font-size: 40px;
+      height: 504px;
+    }
+
+  }
+
+  &__background {
+    width: 100%;
+    max-width: 50vw;
+
+    @include media-breakpoint-down(sm) {
+      height: auto;
+      max-width: 100vw;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: $containerWidth;
+  }
+
+  &__text-block {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      row-gap: 150px;
+    }
+    @include media-breakpoint-down(xs) {
+      row-gap: 88px;
+    }
+  }
+
+  &__title-wrapper {
+    width: 100%;
+    max-width: 563px;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: 50px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-top: 30px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    padding-top: 139px;
+    max-width: 563px;
+    font-family: OpenSans, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    word-spacing: -0.1em;
+    letter-spacing: -0.01em;
+    font-size: 56px;
+    color: $font-color-white;
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 0;
+      max-width: 450px;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-width: 300px;
+      font-size: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto;
+      max-width: 400px;
+      text-align: center;
+      font-size: 40px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 103px;
+
+    @include media-breakpoint-down(xs) {
+      row-gap: 0;
+    }
+  }
+
+  &__description-item {
+    display: flex;
+    column-gap: 90px;
+    align-items: center;
+    max-width: 628px;
+    font-weight: 500;
+    font-size: 30px;
+    color: $font-color-black;
+
+    @include media-breakpoint-down(lg) {
+      column-gap: 20px;
+      max-width: 480px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      column-gap: 27px;
+    }
+  }
+
+  &__item-text {
+    max-width: 444px;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      position: relative;
+      top: -7px;
+    }
+  }
+
+  &__img-block {
+    display: flex;
+
+    @include media-breakpoint-down(lg) {
+      position: relative;
+      top: -100px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+      display: flex;
+      justify-content: end;
+    }
+
+  }
+
+  &__img-wrapper-packs {
+    position: relative;
+    top: -30px;
+    z-index: 5;
+
+    img {
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+      position: absolute;
+      left: -18px;
+      top: 7px;
+      width: 200px;
+      height: 171px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    @include media-breakpoint-down(xxs) {
+      position: absolute;
+      left: -18px;
+      top: 7px;
+      width: 170px;
+      height: 171px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    @include media-breakpoint-down(xxs) {
+      height: 135px;
+    }
+  }
+
+  &__img-wrapper-pills {
+    position: relative;
+    left: -50px;
+    top: 146px;
+
+    img {
+      width: 100%;
+    }
+
+
+    @include media-breakpoint-down(sm) {
+      left: -20px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 100px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      left: 15px;
+      width: 100%;
+      top: 72px;
+      max-width: 288px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    @include media-breakpoint-down(xxs) {
+      left: 18px;
+      width: 100%;
+      top: 48px;
+      max-width: 258px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  &__drugs-purple {
+    width: 103px;
+    height: 84px;
+
+    @include media-breakpoint-down(xs) {
+      width: 56px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      width: 68px;
+      position: relative;
+      top: -5px;
+      left: 3px;
+    }
+  }
+
+  &__heal-yellow {
+    width: 88px;
+    height: 97px;
+
+    @include media-breakpoint-down(xs) {
+      width: 50px;
+      height: 78px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      width: 58px;
+      position: relative;
+      top: -6px;
+      left: 6px;
+      margin-right: 10px;
+    }
+  }
+
+  &__shopping-orange {
+    width: 85px;
+    height: 107px;
+
+    @include media-breakpoint-down(xs) {
+      width: 44px;
+      position: relative;
+      top: -5px;
+      left: 3px;
+      margin-right: 6px;
+    }
+
+    @include media-breakpoint-down(xxs) {
+      width: 55px;
+      position: relative;
+      top: -11px;
+      left: 7px;
+      margin-right: 9px;
+    }
+  }
+}
+
