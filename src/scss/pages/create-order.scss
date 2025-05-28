@@ -1,0 +1,21 @@
+@import '../style';
+@import "../create-order/header";
+@import "../create-order/footer";
+@import "../create-order/order-list";
+@import "../create-order/create-order-form";
+@import "../components/dropdown";
+
+.create-order {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-top: 55px;
+  align-items: center;
+  gap: 32px;
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    gap: 60px;
+  }
+}
